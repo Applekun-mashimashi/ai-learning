@@ -1,0 +1,477 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>AI（人工知能）を理解しよう</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="ai-learning"
+                  title="AI（人工知能）を理解しよう"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="全体概要" duration="0">
+        <p class="image-container"><img style="width: 601.70px" src="img\\c092baf8b24fdcf0.png"></p>
+<p>現代社会においてAI（人工知能）は急速に進化しています。今や製造業、医療、金融、エンターテインメント、教育など、ほぼ全ての分野でAIは活用され、業務の効率化や新しいサービスの創出に貢献しています。</p>
+<p>AIの知識やスキルを持つことは、これからの時代において重要な競争力となり、キャリアの幅、未来の可能性を大きく広げてくれるでしょう。裏を返せば、どの業界であってもAIの基礎を理解し、それを活用できる力が求められる時代が来たということになります。</p>
+<p>AIの学習は決して専門家だけのものではなく、文理や職種を問わず、多くの人々にとって必要です。</p>
+<p>この教材で学習を始めましょう。</p>
+<h2 is-upgraded><strong>目次</strong></h2>
+<ul>
+<li>AIとは</li>
+<li>機械学習</li>
+<li>ディープラーニング</li>
+<li>AIができること</li>
+<li>Teachable Machine</li>
+<li>AI倫理</li>
+<li>出典</li>
+</ul>
+<h2 is-upgraded><strong>必要なもの</strong></h2>
+<ul>
+<li>インターネットに接続可能なPCまたはタブレット</li>
+<li>ウェブカメラ（PC・タブレット内蔵でも可）</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="AIとは" duration="0">
+        <h2 is-upgraded>AI（Artificial Intelligence）とは</h2>
+<p>AIはスマートフォンや自動車、病院など様々な所で使用されており、人間の日々行っている物事を記録・分析しています。この記録や分析により人間の意思決定をサポートしてくれているのです。</p>
+<p>例えば</p>
+<ul>
+<li>SNSの投稿をスキャンして、あなたの思考を学習する</li>
+<li>インターネット上で、あなたが購入したいと思うような商品を推奨する</li>
+<li>膨大な医療データを分析し、画像診断でX線やMRI画像における異常の検知に貢献する</li>
+</ul>
+<p>このようにAIとは、パターンを学習して予測を行う能力です。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded>AIの分類</h2>
+<p>AIには大きく3つの分類があります。</p>
+<p><strong>狭いAI（2010年～2015年）</strong></p>
+<ul>
+<li>「弱いAI」や「特化型AI」と呼ばれることもある、特定の目的に特化して設計された人工知能</li>
+<li>音声認識や画像認識が急速に進化し、Googleの音声検索やSiriなどのパーソナルアシスタントが登場</li>
+</ul>
+<p class="image-container"><img style="width: 601.70px" src="img\\36e0926262480266.png"></p>
+<p>狭いAIは音声認識、画像認識、チャットボット、自動翻訳ツールなど、特定のタスクに特化した技術として広く利用されています。これらの技術は、日常生活やビジネスの効率化に寄与しており、今後もさらなる進化が期待されています。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<p><strong>広いAI（現在）</strong></p>
+<ul>
+<li>単一のタスクに限定されず、多くの用途、より広い範囲の関連タスクを同時に処理できる人工知能</li>
+<li>活用場面が増えたことで、様々な分野から注目されるようになった</li>
+</ul>
+<p class="image-container"><img style="width: 601.70px" src="img\\17b477717e3decde.png"></p>
+<p>広いAIにも、周囲の状況を認識して運転判断を行う自動運転車、患者データから診断や治療法の提案を行う医療診断AI、顧客の非定型質問にも自動で応答するカスタマーサポートAI、消費者の行動からターゲット広告の最適化を手伝うマーケティングAIなど、多くの実例があります。これらの技術は業務の効率化だけでなく、新たな価値の創出に寄与しており、今後も私たちの生活にさらなる影響を与えるでしょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<p><strong>汎用型AI（未来）</strong></p>
+<ul>
+<li>あらゆる知識を備えて人間のように自律的に思考し、学習する能力を持つ人工知能</li>
+<li>AI技術の将来的な発展目標</li>
+</ul>
+<p class="image-container"><img style="width: 601.70px" src="img\\deeb0256e3423457.png"></p>
+<p>未だ明確に汎用型AIと呼ぶことが出来る人工知能は開発されていません。しかし、Open AI社のChatGPTやIBM社のWatsonは、文書生成やデータ分析、プログラミング支援といった高度なタスクを扱えることに加え、人間のように自然な回答を生成できる能力を備えていることから、汎用型AIに向けた進化の過程の例として注目されています。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="機械学習" duration="0">
+        <p>ここでは機械学習を代表する以下の3つの手法について学びます。</p>
+<ul>
+<li>教師あり学習</li>
+<li>教師なし学習</li>
+<li>強化学習</li>
+</ul>
+<h2 is-upgraded><strong>教師あり学習</strong></h2>
+<p>教師あり学習とは、正確な予測を行うために、十分な量の「ラベル付きデータ」を学習させる手法です。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\8435fbb16b1fa3a.png"></p>
+<p>サンプルデータに1つ以上のラベルを付けて学習させます。このラベルでは、➀サンプルデータの主要な特性や特徴。②サンプルデータは実際に何か。を伝える必要があります。</p>
+<p>では、いくつかの画像にラベルを付けて学習させてみます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ff8c9c0e31ab3bf.png"></p>
+<p>機械はそれぞれの画像とラベルの組み合わせからパターンを学習します。</p>
+<p>では、学習していない新たな画像を見せて何の画像か判断してもらいましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\eb9c58915eeaf407.png"></p>
+<p>頭や耳の形、尻尾など、学習させていた「ねこ」の特徴を上手く認識していたため、初めて見せた画像も何かを判別することが出来ました。</p>
+<p>より多くのラベル付きデータを学習させることで、この精度を高めることが出来ます。</p>
+<p>問題(サンプルデータ)と正解(ラベル)を合わせて学習させるプロセスが、先生から生徒へ指導する形と似ていますよね。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded><strong>教師なし学習</strong></h2>
+<p>教師なし学習は、学習データに正解ラベルを付与せず学習させる手法です。この手法ではデータの構造や特徴、パターンを自動的に分析するため、以下のような作業が得意といえます。</p>
+<ul>
+<li>頻出パターンの発見</li>
+<li>グループ分け</li>
+<li>データ簡略化</li>
+</ul>
+<p>ここでは、<strong>クラスタリング</strong>という「データ間の類似度に基づいてデータをグループ分けする手法」を学びましょう。</p>
+<p>まずは様々な特徴を持つデータを学習させてみましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\526b3aa8daeb2ca5.png"></p>
+<p>次に、学習したデータをクラスタリングします。</p>
+<p>クラスタリングによって分類されたグループは、<strong>クラスタ</strong>と呼ばれます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\3ade22137f270927.png"></p>
+<p>ここではAIがデータの特徴を基に、自動的に「データの形でグループ分け」「データの色でグループ分け」をしてくれました。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<p>教師なし学習のメリットは、サンプルデータにラベルを付ける必要が無いため、<strong>データの前処理が比較的簡単かつ汎用性が高い</strong>ことです。しかし、特定のタスクに対するパフォーマンスで見ると教師あり学習の精度に劣る場合があることや、どうしてこのグループ分けになったのかという学習結果の解釈が難しい場合があるというデメリットも存在します。</p>
+<p>一見、教師なし学習は難しく感じるかもしれませんが、データさえ学習させたら自動的に類似した自然なグループを見つけ出してくれるので、データの分類方法が分からない場合に役に立ちます。</p>
+<p>汎用性の高さから教師なし学習は様々な業界で活用されていますが、その一つの例として、企業が顧客の情報をクラスタリングしてグループ分けを行うことがあります。あるグループ内で同じ商品が複数回購入された場合、同じグループに属する別の顧客にも同じ商品を推薦するといった販売戦略に繋げているのです。人間には気付かないような複雑な顧客データの中から類似点を見つけ出し、グループ化してくれるのは教師なし学習の最大の魅力ですね。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded><strong>強化学習</strong></h2>
+<p>強化学習は教師あり学習や教師なし学習と違い、機械学習モデルにサンプルデータを使用してトレーニング（＝学習）させるのではなく、モデルが試行錯誤を繰り返し、フィードバックに基づいて最適な決定を学習させていく手法です。</p>
+<p>強化学習のポイントは、正しい振る舞いには「<strong>報酬</strong>」を、間違った振る舞いには「<strong>罰</strong>」を与えることです。</p>
+<p>次の例を参考に理解しましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\fa8135697343b6a9.jpeg"></p>
+<p>例えば「<strong>エージェント</strong>」と呼ばれるAIが、「<strong>環境</strong>」と呼ばれる物理的または仮想の領域にあるとして、出発地点から目的地への最短ルートを見つけ出してもらおうと思います。</p>
+<p>このエージェントに何も報酬や罰などのフィードバックを与えなければ、どうしていいか分からず動けません。そこで、目的地には報酬として正の値、それ以外の地点には罰として負の値を置いてみます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\9baff865687755fc.jpeg"></p>
+<p>何も学習していないエージェントは、出発地点から目的地に辿り着くまで上下左右ランダムにグルグル動き回るでしょう。エージェントは「目的地に辿り着いたら、通ってきたルートで拾い集めた値の合計値を算出し学習する」という試行を何度も繰り返すことで、目的地に辿り着いた時の合計値を最大化できるルート（＝最短ルート）を見つけ出します。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\8ae375f9fcb50543.jpeg"></p>
+<p>これがフィードバックに基づいて最適な決定を学習する強化学習という手法です。</p>
+<p>強化学習によってもたらされる未知の環境に適応し最適な決定を下す能力は、自動化システムやスマートデバイスが予測不能な変更に迅速に対応するための鍵となるので、非常に重要視されています。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="ディープラーニング" duration="0">
+        <p>ディープラーニングの理論は、<strong>パーセプトロン</strong>と呼ばれる<strong>ニューラルネットワーク</strong>の一種を理解することで学習できます。</p>
+<aside class="special"><p>ニューラルネットワーク：</p>
+<p>人間の脳に存在する<strong>ニューロン</strong>という神経細胞間の相互接続構造から着想を得て作られた数学モデル</p>
+<p>簡単に言うと、人間の脳の仕組みを模したモデルです。</p>
+</aside>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded><strong>パーセプトロン</strong></h2>
+<p><strong>単純パーセプトロン</strong>と呼ばれる、パーセプトロンの基本の形はこのようになります。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\1640cf5cb361e23.png"></p>
+<ul>
+<li>バイアスの値は常に１</li>
+<li>入力には０か１を割り当てる</li>
+<li>重みは、入力が出力に与える影響の重要度を意味する</li>
+<li>総和は、足し算を意味する</li>
+<li>ステップ関数は正の値ならYES、負の値ならNOとなる</li>
+<li>出力は、YESかNOのどちらかに決まる</li>
+</ul>
+<p>このパーセプトロンの図を数式で表すとこうなります。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\7ff8d516ae6821d0.jpeg"></p>
+<p>分かりやすく数式を展開すると、</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\7eb016c24b0d9084.jpeg"></p>
+<p>このようになります。</p>
+<p>試しに、入力に１と０、重み付けを上からー3.0と2.0と4.0という形で割り当てたらどうなるでしょうか。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\13d4065a24a2b223.jpeg"></p>
+<p>「NO」という出力が得られました。単純パーセプトロンで行われている計算の仕方は理解できましたか？</p>
+<p>次の例を参考に、パーセプトロンについてより深く理解しましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded><strong>AIはどのように判断しているのか？</strong></h2>
+<p>外へ遊びに行きたい場合、様々な要素から外出するかどうかをAIに判断してもらいましょう。</p>
+<p>まずは外出の判断に影響がありそうな要素を挙げてみます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\d77bdd074beb9bab.jpeg"></p>
+<p>次に、挙げられた要素の中で、それぞれが外出の判断にどれだけ影響力があるかを考えてみましょう。例えば、予定が空いていなければ外へ遊びに行くことができませんので、重要度は一番高いでしょう。その次は現在の天気でしょうか？この後の天気予報も気になるし、今は晴れているので不要な傘も天気が悪化したら必要になりますね。</p>
+<p>今回は例として、このように重要度の順位付けをしました。</p>
+<ol type="1" start="1">
+<li>予定が空いている</li>
+<li>外は晴れている</li>
+<li>この後の天気予報は晴れ</li>
+<li>傘を持っている</li>
+</ol>
+<p>この順位が高い順に重要度を示す重みの値も大きくなります。重み付けをする具体的な数値に正解は無いので、順位が入れ替わらなければ、いくつに設定しても構いません。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\6386fb33706f60b9.jpeg"></p>
+<p>それぞれの要素において、図のように順位が入れ替わらないよう注意して重要度の重み付けをしてみました。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded>パターン１</h2>
+<p>あなたの置かれている状況が</p>
+<ul>
+<li>予定が空いている</li>
+<li>傘を持っていない</li>
+<li>外は晴れている</li>
+<li>この後の天気予報は晴れではない</li>
+</ul>
+<p>だとします。</p>
+<p>すると、それぞれの要素の入力（１か０）が下図のように定まり、数式に当てはめて計算すると「YES」という出力が得られます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\17c888b635d68d25.png"></p>
+<p class="image-container"><img style="width: 601.70px" src="img\\8573e6f59c2ea340.jpeg"></p>
+<p>このパターンでは、AIは「外出する」という判断を出しました。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded>パターン２</h2>
+<p>あなたの置かれている状況が</p>
+<ul>
+<li>予定が空いていない</li>
+<li>傘を持っている</li>
+<li>外は晴れている</li>
+<li>この後の天気予報は晴れ</li>
+</ul>
+<p>だとします。</p>
+<p>すると、それぞれの要素の入力（１か０）が下図のように定まり、数式に当てはめて計算すると、今回は「NO」という出力が得られます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\a0c50a7e01679a67.png"></p>
+<p class="image-container"><img style="width: 601.70px" src="img\\d94e91ff23570f38.jpeg"></p>
+<p>このパターンでは、AIは「外出しない」という判断を出しました。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<p>ここまでの学習で分かる通り、パーセプトロンの肝になるのは設定する重みの部分です。どのようなAIを作成したいのか、ある要素の重要度が他の要素に比べてどれだけ高いのかなど、重みに設定する値を細かく調整することでAIの精度を高めることができます。</p>
+<p>ディープラーニングでは、これまで学習した単純パーセプトロンをいくつも重ねた<strong>多層パーセプトロン</strong>と呼ばれるモデルが使われます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\35c80670bd23427.jpeg"></p>
+<p>増えた層のことを「隠れ層」と呼びます。層を増やすことでより複雑なモデルが可能になります。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="AIができること" duration="0">
+        <p>このパートでは、AIがどのように活用されているのかについて学んでいきましょう。</p>
+<p>気になるものがあればリンクを設定してあるので、より詳しく見てみましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded><strong>画像認識</strong></h2>
+<p class="image-container"><img style="width: 601.70px" src="img\\4a3259d55ede899c.jpeg"></p>
+<p>画像引用元：<a href="https://www.ricoh.co.jp/special/body-temperature-detection" target="_blank">RICOH：発熱者検知ソリューション</a></p>
+<ul>
+<li>ディープラーニングで最も社会実装されている技術</li>
+<li>身近な場所で当たり前の技術となっている</li>
+<li>人間の目の精度を超えている</li>
+</ul>
+<p>画像認識とは、画像や映像に何が映っているかを認識する技術です。対象物の形や色などの特徴から、それが何であるかを判断するパターン認識という手法が用いられています。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded><strong>画像生成</strong></h2>
+<p class="image-container"><img style="width: 601.70px" src="img\\5caa1a33c166d73c.png"></p>
+<p>使用サイト：<a href="https://muryou-aigazou.com/ja" target="_blank">AIGAZOU</a></p>
+<ul>
+<li>実在しない画像や架空の画像などを生成する技術</li>
+<li>小売業向けに実在しない人物の写真を生成するなどのビジネス利用も注目を集めている</li>
+<li>プロンプトにキーワードや文章を記述することで簡単に画像の生成が可能</li>
+</ul>
+<p>画像生成は、入力されたテキストから学習済みのデータを基に特徴を探し、一致する特徴から画像を生成する仕組みです。生成される画像の種類を実写、アニメ、3Dモデルなどから選べるものも存在し、誰でも簡単に精度の高い画像を作成することが可能です。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded><strong>音声認識</strong></h2>
+<p class="image-container"><img style="width: 601.70px" src="img\\621a8204cdcaad2.png"></p>
+<p>画像引用元：<a href="https://lp.smartshoki.com/?msclkid=ba82f54e19121a260e949259bca6efa6&utm_source=bing&utm_medium=cpc&utm_campaign=%E8%A3%BD%E5%93%81%E5%91%8A%E7%9F%A5_%E3%82%82%E3%81%AE%E3%81%A5%E3%81%8F%E3%82%8A%E8%A3%9C%E5%8A%A9%E9%87%91_20220516&utm_term=%E6%96%87%E5%AD%97%E8%B5%B7%E3%81%93%E3%81%97+%E3%82%BD%E3%83%95%E3%83%88&utm_content=0516_%C2%A510,000/%E6%97%A5" target="_blank">エピックベース株式会社：スマート書記</a></p>
+<ul>
+<li>会議等で録音したデータの文字起こし</li>
+<li>企業レベルでしか使えなかった技術が民主化</li>
+<li>指定したYouTube動画の書き起こしなども可能</li>
+<li>数年前から非常に精度を高めた技術</li>
+</ul>
+<p>音声認識とは、コンピュータが人間の言葉を理解して文字に変換する技術です。音声をデータ化して、最小の音声単位である音素と呼ばれるものを抽出します。この音素と単語の対応関係を学習した機械学習モデルを用いて音素を単語に変換しています。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded><strong>音声生成</strong></h2>
+<p class="image-container"><img style="width: 601.70px" src="img\\d6e9f90aaf17e2c5.png"></p>
+<p>使用ツール：<a href="https://voicevox.hiroshiba.jp/" target="_blank">VOICEVOX</a></p>
+<ul>
+<li>数年前から非常に精度の高い技術</li>
+<li>電車やバスなどのアナウンス、ロボット音声</li>
+<li>キャラクターの音声生成が可能になるなど、企業レベルで使用していた技術が民主化</li>
+</ul>
+<p>音声生成とは、テキストや画像、動画などのデータを学習し、新しい音声を生成する技術です。自然な人の声も生成可能なので、ビジネスシーンだけでなく、プライベートや医療現場でもより広く活用される可能性を高めました。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded><strong>自然言語処理</strong></h2>
+<p class="image-container"><img style="width: 601.70px" src="img\\4bf3800d56f19f2e.png"></p>
+<p>使用ツール：<a href="https://openai.com/ja-JP/chatgpt/overview/" target="_blank">ChatGPT</a></p>
+<ul>
+<li>自然な会話ができるようになるまで研究が進んでいる</li>
+<li>Google翻訳やDeepLなどにも使われている</li>
+</ul>
+<p>自然言語処理とは、計算言語学、統計モデリング、機械学習、ディープラーニングを組み合わせることで、コンピューターがテキストや音声を認識し理解できるようにする技術です。人間が日常的に使用する自然な言語で機械とコミュニケーションを取ることが可能です。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded><strong>文書生成</strong></h2>
+<p class="image-container"><img style="width: 601.70px" src="img\\c43a1909ba38c479.png"></p>
+<p>使用ツール：<a href="https://openai.com/ja-JP/chatgpt/overview/" target="_blank">ChatGPT</a></p>
+<ul>
+<li>前後の文脈に基づいて適切な言葉やフレーズを選ぶ</li>
+<li>生成された文章には序論、本論、結論などの論理的な構造がある</li>
+<li>ターゲットとなる読者層や使用目的に応じて語調や専門用語の使い方を適応させる</li>
+</ul>
+<p>文書生成とは、大量のデータからパターンを学び、新しいアイデアや視点を含む創造的な文書を生成することができる技術です。クリエイティブな文章を生成するためにも、既存のパターンやトレンドを参考にすることが多いです。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Teachable Machine" duration="0">
+        <p>このパートでは、ディープラーニングを使用した画像分類AIの作成に挑戦してみましょう。</p>
+<p>プログラミングを学んだことが無くても大丈夫です、コード記述が不要な<strong>Teachable Machine</strong>を使用して簡単にAI体験ができます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded>画像分類AIの作成</h2>
+<p>カメラ映像を入力として、リアルタイムに画像を認識し分類するAIを作成します。</p>
+<p>具体的に学習させるのは、以下の3つの状態です。</p>
+<ul>
+<li>指０本のポーズ</li>
+<li>指１本のポーズ</li>
+<li>指２本のポーズ</li>
+</ul>
+<p>それでは画像分類AIの作成を始めましょう。</p>
+<p><a href="https://teachablemachine.withgoogle.com/" target="_blank">Teachable Machine</a></p>
+<p>上のリンクから、Google社が提供するTeachable Machineのサイトへ移動してください。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\d2b35eda238baee4.png"></p>
+<p>サイトへ移動したら、「使ってみる」を押しましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\e053de490959292f.png"></p>
+<p>Teachable Machineでは、3種類（画像・音声・ポーズ）のAIが作成可能です。今回は「画像プロジェクト」を選択しましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\235de1b0e5ad4184.png"></p>
+<p>「標準の画像モデル」を選択します。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\aa943d352e027322.png"></p>
+<p>この画面になれば準備完了です。</p>
+<p>次からはウェブカメラを使用して、学習データを作成していきます。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\550a57b6eb5f791b.png"></p>
+<p>「ウェブカメラ」を選択してください。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\2e9ddf47f6b7bfc9.png"></p>
+<p><strong>指０本のポーズ</strong>をカメラに映した状態で「長押しして録画」を押します。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\943cf192b9f13f3b.png"></p>
+<p>大体５０枚くらいデータを用意できれば良いでしょう。長押しすると連続で撮影できるので便利です。</p>
+<p>データセットを<strong>クラス</strong>と呼びます。「鉛筆アイコン」をクリックして、クラスの名前を<strong>「指０本」</strong>と分かりやすい名前に変更しておきましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\4c7ef3018b70fab3.png"></p>
+<p>同様の手順で<strong>「指１本」</strong>クラスも作成してください。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\dcf41b4dd4e81c3.png"></p>
+<p class="image-container"><img style="width: 601.70px" src="img\\b5533bcdae95d043.png"></p>
+<p>「クラスを追加」を押して、最後に<strong>「指２本」</strong>クラスも作成してください。</p>
+<p>これで学習データの作成が終わりました。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\43d13eaef6c39878.png"></p>
+<p>作成した学習データを基にコンピューターに学習するよう指示を出しましょう。「モデルをトレーニングする」を押してください。</p>
+<p>操作は簡単ですが、裏でコンピューターが膨大な計算を行い、重みを何度も調整してなるべく正確に画像を分類できるよう学習しています。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\678314acbb15c55c.png"></p>
+<p>トレーニングが完了したらカメラにポーズを映してみましょう。AIが学習したパターンからリアルタイムに指の本数を判断してくれます。</p>
+<p>ここで大事なことは、「コンピューターは手や指が何なのかを知らない」ということです。AIは収集した画像に含まれる色や形など、様々な情報から判断してどのクラスに該当するかを出力しているので、指が何かを知らなくても本数を数えられるのです。</p>
+<p><strong>興味のある人は、AIの精度を高めるにはどのように学習データを撮影すれば良いか考えてみてください。（このパートの一番下にいくつか回答例を出しています）</strong></p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<p>また指の本数だけでなく、画像分類AIでの遊び方はたくさんあります。作成手順は同じなので、興味があれば試してみてください。</p>
+<ul>
+<li>じゃんけん（グー・チョキ・パー）</li>
+<li>顔の有無（変顔をしても顔と判断してくれるでしょうか？）</li>
+<li>マスク着用の有無（色や形状など様々なマスクがありますね）</li>
+<li>文房具やぬいぐるみ（正面だけでなく、背面を映しても正しく物を判断できるでしょうか？）</li>
+</ul>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<aside class="warning"><p>画像分類AIの精度を高めるための工夫（回答例）</p>
+<p>・背景色を単色もしくは対象物と色味が被らないようにすることで、対象物の輪郭を正確に捉えやすくなる</p>
+<p>・一点からだけでなく、様々な角度から対象物を撮影することでデータのパターンを多く学習しやすくなる</p>
+<p>・各クラスの撮影枚数を100枚,150枚,...と増やすことで、パターンを正確に学習しやすくなる</p>
+<p>これは回答例の一部です。他にもAIの精度を高める工夫が思いついたら自身で試してみてください。</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="AI倫理" duration="0">
+        <p><a href="https://www.nec-solutioninnovators.co.jp/sp/contents/column/20220318_big-data.html" target="_blank">ビッグデータ</a>の出現により、企業は自動化とデータに基づく意思決定を組織全体で推進することに力を入れるようになってきました。しかしAI開発においては、意図しない結果になることも事実です。考えられる主な原因は、事前の調査設計が不十分なこと、データセットに偏りがあることだと言われます。結果に公平性を欠く事例が明らかになってきたことで、AIの倫理に関する懸念が大きくなっており、AIを利用・開発する際にはAI倫理について理解することが重要と考えられています。</p>
+<p>このパートでは、AI倫理について学習していきましょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded>AI倫理（利用編）</h2>
+<p>AIを利用する際に、理解しておくべき5つの倫理的懸念点があります。</p>
+<h3 is-upgraded><strong>誤った情報やフェイクコンテンツ</strong></h3>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/fuekp6zYj9M?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>YouTube動画リンク：<a href="https://www.youtube.com/watch?v=fuekp6zYj9M&t=46s" target="_blank">「ディープフェイク」の脅威とは？【あさチャン】</a></p>
+<p>ディープフェイクやフェイクニュース記事などの説得力のある嘘のコンテンツを簡単に作成出来てしまうため、個人や社会に重大な影響を与える可能性があります。</p>
+<h3 is-upgraded><strong>知的財産権と著作権</strong></h3>
+<p>著作権で保護された素材に類似したコンテンツも作成することができます。これは知的財産権侵害の可能性が疑われるので、AIが膨大なデータを学習していく過程で、保護された素材を回避することや権利を保護しながら学習する必要があります。</p>
+<h3 is-upgraded><strong>プライバシー</strong></h3>
+<p>個人についてのリアルな画像やテキストを作成した場合、その個人のプライバシーを侵害し評判を傷つける可能性があることを忘れてはいけません。SNSなどの使い方でも同じような話題がよく取り上げられますが、AIには架空の画像やテキストを簡単に作れてしまうという特徴があるので、使い方を間違えればより大きな問題になり得ます。</p>
+<h3 is-upgraded><strong>ヒューマンタッチの喪失</strong></h3>
+<p>生成AIの普及により、様々な分野で人間味が失われるというリスクが指摘されています。AIの作業効率や精度に注目すると、基本的に人間よりも優れていると言えますが、これにより人間が作った芸術や文化に対する評価が低下する恐れを考慮してみると、良い話ではないように思えます。</p>
+<h3 is-upgraded><strong>失業および整理解雇</strong></h3>
+<p>これまで人間が行っていたタスクは機械で行えるようになり、クリエイティブ業界での整理解雇につながる可能性があります。一つ前で紹介した「ヒューマンタッチの喪失」と重なる部分がありますね。効率化を重視する場面、人間の手を入れる場面のすみ分けを行い、上手にAI活用ができると良いです。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\ab38c29ba24145b8.jpeg"></p>
+<h2 is-upgraded>AI倫理（開発編）</h2>
+<p>AI開発では以下の5つのポイントに注意する必要があります。</p>
+<h3 is-upgraded><strong>公平性</strong></h3>
+<p>個人または個人からなるグループを公平に取り扱うこと。</p>
+<p>例えば、AIモデルをトレーニングする際、テストに使用するデータによって望ましくない偏見が表れる可能性があります。AIにおいて、偏見というのは意図的かどうかに関わらず、不公平な決定を生み出す可能性があるという意味で体系的なエラーとして扱われます。</p>
+<h3 is-upgraded>事例：意図せず起こった「人種差別」</h3>
+<aside class="special"><p>Google社の「Googleフォト」</p>
+<p>・Googleフォトとは、写真や動画用のクラウドストレージサービス</p>
+<p>・写真に関連するキーワードをAIが自動で判別して付与する自動タグ付け機能が特徴</p>
+<p>・黒人の写真を「ゴリラ」とタグ付けしてしまう問題が発覚</p>
+<p>・告発を受け、「ゴリラ」のラベルをシステムから削除することを発表</p>
+<p>「ゴリラ」は黒人を侮辱する言葉としての歴史をもっているため、意図しない人種差別問題になってしまった</p>
+</aside>
+<p>出典元：<a href="https://globe.asahi.com/article/12287524" target="_blank">黒人カップルを「ゴリラ」とタグ付け 顔認識はどこまで「使える」のか（朝日新聞GLOBE＋）</a></p>
+<h3 is-upgraded><strong>堅牢性</strong></h3>
+<p>AIが堅牢であると、意図しない危害を起こさず、入力の異常や悪意のある攻撃など例外的な状況に対処できます。</p>
+<h3 is-upgraded>データポイズニング</h3>
+<p>ここでは入力の異常や悪意のある攻撃とはどのようなものか、「データポイズニング」という攻撃手法を例として取り上げます。データポイズニングは、AIモデルの学習データに対して意図的に不正確または有害なデータを混入させることで、モデルの性能や出力を操作します。</p>
+<p>例えば、患者のX線画像から肺がんを検知するアプリケーションを開発しているとします。AIの画像認識を用いて、患者の肺のX線画像から、病気か病気でないかを分類できるようにトレーニングさせることになるでしょう。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\9b25a882d66179ae.png"></p>
+<p>本来はこのように、正常な肺画像には「病気なし」、異常のある肺画像には「病気」というラベルを付けてトレーニングさせたいです。</p>
+<p>しかし、データポイズニングの多くは、この学習データの中に意図的な変更を加えることでデータの改ざんを行います。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\d8dba5ed4533cce7.png"></p>
+<p>下の4つの肺画像データには、<strong>ノイズ</strong>と呼ばれる人間の目では認識できないような小さな変更を加えました。</p>
+<p>正常な肺画像にノイズという微小な変更を加えることで、人間の目には正常な肺画像との違いが分からないのに対して、AIには全く異なる異常な肺画像として認識させることができます。人間にはノイズが視認できないので、ノイズを含んだ肺画像データにも「病気なし」とラベルを付けてトレーニングしてしまいます。</p>
+<p>これがデータポイズニングの仕組みです。今回の例では、ノイズのパターンを学習したAIがノイズを含んだ画像データに近い異常な肺画像に対して、「病気なし」と誤った判断をする可能性が高まってしまいました。</p>
+<h3 is-upgraded><strong>説明可能性</strong></h3>
+<p>システムがどのように、そしてなぜ特定の予測や推奨に至ったのかを理解できる場合は説明可能となります。</p>
+<p>ここに、4つの味（イチゴ・ミント・キャラメルコーヒー・ブラックコーヒー）の中から、今の気分にぴったりな飴の味を推薦するモデルが2パターンあります。</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\c9ba928a4ced8f7e.png"></p>
+<p>両方のモデルでミント味が選ばれたとしましょう。</p>
+<p>ミント味が選ばれた背景を説明するとしたら、あなたが理解しやすいのはどちらのモデルですか？</p>
+<p>より信頼できるAIを開発するには、予測や生成におけるプロセスと結果を人間が理解できることが重要になります。</p>
+<h3 is-upgraded><strong>プライバシー</strong></h3>
+<p>AIは学習、パターンの特定、予測および推奨を行うために大量のデータを取り込みます。インターネットからの大規模なデータ処理に基づく生成AIともなれば、機密データの漏洩や法的に保護された個人情報の侵害リスクが増大します。</p>
+<h3 is-upgraded>事例：個人情報の不適切な取り扱いによるプライバシー侵害</h3>
+<p class="image-container"><img style="width: 601.70px" src="img\\83538014342289c7.jpeg"></p>
+<p>画像引用元：<a href="https://www.pexels.com/ja-jp/photo/977296/" target="_blank">Pexels：alexa</a></p>
+<aside class="special"><p>Amazonの「Alexa」</p>
+<p>・Alexaと会話した子供たちの位置情報や音声データをアルゴリズムのトレーニングに利用</p>
+<p>・親からデータの削除要請があったにもかかわらず、一部を保管</p>
+<p>・米Amazonは「利益のためにプライバシーを犠牲にした」として、罰金の支払いに加え、子供のデータの削除などを和解条項として提訴された</p>
+</aside>
+<p>出典元：<a href="https://www.itmedia.co.jp/news/articles/2306/01/news074.html" target="_blank">Amazon、「Alexa」による児童オンラインプライバシー法違反で罰金2500万ドル(ITmedia)</a></p>
+<p>プライバシーの侵害を防ぐためには、データの収集範囲を最小限にし、収集したデータを適切に管理する体制の構築が求められます。</p>
+<h3 is-upgraded><strong>透明性</strong></h3>
+<p>AIがどのように意思決定を行うのか、どのようなデータを使用しているのかなど、利用者に対してAIの内部構造を提供することです。</p>
+<p>具体的には</p>
+<ul>
+<li>モデルの公平性の評価</li>
+<li>堅牢性テストの結果</li>
+<li>説明可能性の機能</li>
+<li>全てのデータ・プライバシー対策の文書化  など</li>
+</ul>
+<p>これらをAIシステムの利用者へ提供することで、信頼できるAI開発になります。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="出典" duration="0">
+        <ol type="1" start="1">
+<li>IBM 『IBM SkillsBuild』 https://skillsbuild.org/</li>
+<li>AIsmiley 『教師なし学習とは？種類・活用事例・クラスタリング手法を簡単解説』 https://aismiley.co.jp/ai_news/unsupervised-learning/</li>
+<li>いらすとや 『かわいいフリー素材集いらすとや』 https://www.irasutoya.com/</li>
+<li>Intel 『AI for Future Workforce 5hコース（2024/02/02更新）』 https://jellyware.jp/webinar/ai4wf/#0</li>
+<li>リコー 『発熱者検知ソリューション』 https://www.ricoh.co.jp/special/body-temperature-detection</li>
+<li>NTT東日本 『【基本を解説】画像認識とは？主な活用例５つ｜何ができる？その仕組みは？』 https://business.ntt-east.co.jp/content/cloudsolution/column-391.html</li>
+<li>AIGAZOU 『無料AI画像生成』 https://muryou-aigazou.com/ja</li>
+<li>日立ソリューションズ・クリエイト 『画像生成aiとは？ 仕組みや人気ツールなどを解説』 https://www.hitachi-solutions-create.co.jp/column/technology/image-generation-ai.html</li>
+<li>エピックベース 『スマート書記』 https://www.smartshoki.com/</li>
+<li>フルバリュー 『音声認識の仕組みとは？メリットや活用例を紹介』 https://fullvalue.co.jp/media/ai-18/</li>
+<li>VOICEVOX 『VOICEVOX 無料で使える中品質なテキスト読み上げ・歌声合成ソフトウェア』 https://voicevox.hiroshiba.jp/</li>
+<li>AIsmiley 『音声生成AIとは？おすすめアプリ１１選を紹介』 https://aismiley.co.jp/ai_news/what-is-voice-generative-ai-11/</li>
+<li>OpenAI 『ChatGPT』 https://openai.com/ja-JP/chatgpt/overview/</li>
+<li>IBM 『NLP（自然言語処理）とは』 https://www.ibm.com/jp-ja/topics/natural-language-processing</li>
+<li>Google 『Teachable Machine』 https://teachablemachine.withgoogle.com/</li>
+<li>NECソリューションイノベータ 『ビッグデータとは？基礎知識と活用事例を解説』 https://www.nec-solutioninnovators.co.jp/sp/contents/column/20220318_big-data.html</li>
+<li>IBM 『AI倫理とは』 https://www.ibm.com/jp-ja/topics/ai-ethics</li>
+<li>TBS NEWS DIG Powered by JNN 『「ディープフェイク」の脅威とは？【あさチャン】』 https://www.youtube.com/watch?v=fuekp6zYj9M&amp;t=46s</li>
+<li>朝日新聞GLOBE＋ 『黒人カップルを「ゴリラ」とタグ付け 顔認証はどこまで「使える」のか』 https://globe.asahi.com/article/12287524</li>
+<li>アクト 『生成AIを毒で汚染？データポイズニングとは｜わかりやすく解説』 https://act1.co.jp/column/0225-2/</li>
+<li>Pexels 『テーブルの上の黒いアマゾンエコー』 https://www.pexels.com/ja-jp/photo/977296/</li>
+<li>ITmedia NEWS 『Amazon、「Alexa」による児童オンラインプライバシー法違反で罰金２５００万ドル』 https://www.itmedia.co.jp/news/articles/2306/01/news074.html</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
